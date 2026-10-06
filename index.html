@@ -3,117 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Near Coffee Space</title>
-    
+    <title>near coffee.space — a cozy corner in New York City</title>
+    <meta name="description" content="near coffee.space is a small coffee house opening soon in New York City. Slow pours, good light, and a seat with your name on it.">
+    <meta name="theme-color" content="#16110d">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="near coffee.space">
+    <meta property="og:description" content="A cozy corner for your daily brew. Opening soon in New York City.">
+    <meta property="og:url" content="https://www.nearcoffee.space/">
+    <meta property="og:image" content="https://www.nearcoffee.space/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <style>
-        /* --- Color Palette --- */
-        :root {
-            --bg-color: #F9F7F2;       /* Warm Oatmeal */
-            --text-color: #4A403A;     /* Dark Coffee Bean */
-            --accent-color: #8DA399;   /* Soft Sage Green */
-            --highlight: #E8DCC4;      /* Latte Foam */
-        }
-
-        /* --- Global Styles --- */
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Lora', serif; /* Cozy reading font */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        /* --- Layout Container --- */
-        .container {
-            max-width: 600px;
-            padding: 40px;
-            border-radius: 20px;
-            /* Subtle border for structure without heaviness */
-            border: 1px solid var(--highlight); 
-        }
-
-        /* --- Typography --- */
-        h1 {
-            font-family: 'Nunito', sans-serif; /* Modern, rounded header */
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            color: #6D635B; /* Slightly lighter text for softness */
-        }
-
-        .highlight {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        /* --- Modern Button --- */
-        .btn {
-            display: inline-block;
-            text-decoration: none;
-            background-color: var(--text-color);
-            color: #fff;
-            padding: 15px 30px;
-            border-radius: 50px; /* Pill shape is very modern/cozy */
-            font-family: 'Nunito', sans-serif;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(74, 64, 58, 0.15);
-        }
-
-        .btn:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px); /* Gentle lift effect */
-            box-shadow: 0 6px 20px rgba(141, 163, 153, 0.3);
-        }
-
-        /* --- Footer --- */
-        .footer {
-            margin-top: 50px;
-            font-size: 0.9rem;
-            opacity: 0.6;
-            font-family: 'Nunito', sans-serif;
-        }
-
-        /* Mobile Adjustment */
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-            .container { padding: 20px; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="container">
-        <h1>near coffee<span style="color:var(--accent-color)">.</span>space</h1>
-        
-        <p>
-            A cozy corner for your daily brew. <br>
-            We are opening our first location soon.
-        </p>
+    <!-- ============ Header ============ -->
+    <header class="site-header">
+        <a href="#top" class="logo" aria-label="near coffee.space, back to top">
+            near coffee<span class="logo-dot">.</span>space
+        </a>
+        <nav class="nav" aria-label="Primary">
+            <a href="#idea">The idea</a>
+            <a href="#menu">First pours</a>
+            <a href="#space">The space</a>
+        </nav>
+        <span class="status-pill"><span class="pulse" aria-hidden="true"></span>Opening soon</span>
+    </header>
 
-        <a href="https://instagram.com" class="btn">Follow Updates</a>
+    <main id="main">
+        <!-- ============ Hero ============ -->
+        <section class="hero" id="top">
+            <canvas class="hero-stars" aria-hidden="true"></canvas>
+            <div class="hero-glow" aria-hidden="true"></div>
 
-        <div class="footer">
-            &copy; 2026 Near Coffee Space<br>
-            New York City
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow reveal">New York City · Est. 2026</p>
+                    <h1 class="hero-title reveal">
+                        <span class="line">A small orbit</span>
+                        <span class="line">around a <em>good</em></span>
+                        <span class="line"><em>cup</em> of coffee.</span>
+                    </h1>
+                    <p class="hero-lede reveal">
+                        A cozy corner for your daily brew. Slow pours, warm light,
+                        and a seat that feels like it was saved for you.
+                        We're opening our first location soon.
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="https://instagram.com" class="btn btn-primary" target="_blank" rel="noopener">
+                            Follow the opening
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                        </a>
+                        <a href="#idea" class="btn btn-ghost">What's brewing</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <div class="arch media media--ember">
+                        <img src="assets/images/hero-cup.webp" alt="A ceramic cup of coffee on dark stone, its steam curling into a slow spiral" width="960" height="1200" fetchpriority="high">
+                    </div>
+                    <div class="badge" aria-hidden="true">
+                        <svg viewBox="0 0 200 200">
+                            <defs><path id="badge-circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+                            <text><textPath href="#badge-circle">opening soon · opening soon · opening soon · </textPath></text>
+                        </svg>
+                        <span class="badge-core">☕︎</span>
+                    </div>
+                    <p class="hero-coords" aria-hidden="true">40.7128° N<br>74.0060° W</p>
+                </div>
+            </div>
+
+            <a href="#idea" class="scroll-cue" aria-label="Scroll to learn more"><span></span></a>
+        </section>
+
+        <!-- ============ Marquee ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>slow pours</span><i>✦</i><span>good light</span><i>✦</i><span>neighbors</span><i>✦</i><span>fresh pastries</span><i>✦</i><span>stay a while</span><i>✦</i>
+                <span>slow pours</span><i>✦</i><span>good light</span><i>✦</i><span>neighbors</span><i>✦</i><span>fresh pastries</span><i>✦</i><span>stay a while</span><i>✦</i>
+            </div>
         </div>
-    </div>
 
+        <!-- ============ Manifesto ============ -->
+        <section class="manifesto section-light" id="idea">
+            <p class="eyebrow eyebrow-dark reveal">01 — The idea</p>
+            <p class="manifesto-text reveal">
+                Everyone deserves a place that's <em>near</em> — close enough to be part of your
+                morning, quiet enough to hear yourself think. Not a chain. Not a rush.
+                Just good <em>coffee</em>, made with care, in a <em>space</em> that feels like yours.
+            </p>
+        </section>
+
+        <!-- ============ Pillars ============ -->
+        <section class="pillars section-light" aria-label="What we care about">
+            <article class="pillar reveal">
+                <div class="pillar-media arch media media--crema">
+                    <img src="assets/images/pour-over.webp" alt="Water pouring slowly over a pour-over cone, backlit amber" width="800" height="1000" loading="lazy">
+                </div>
+                <span class="pillar-num">01</span>
+                <h2>Slow pours</h2>
+                <p>Small-batch beans, dialed in every morning. We'd rather take a minute longer and get it right.</p>
+            </article>
+            <article class="pillar reveal">
+                <div class="pillar-media arch media media--sage">
+                    <img src="assets/images/window-light.webp" alt="A window seat bathed in soft morning light with a cup on the sill" width="800" height="1000" loading="lazy">
+                </div>
+                <span class="pillar-num">02</span>
+                <h2>Good light</h2>
+                <p>Big windows, warm lamps, soft corners. A room designed for lingering, reading, and long talks.</p>
+            </article>
+            <article class="pillar reveal">
+                <div class="pillar-media arch media media--clay">
+                    <img src="assets/images/neighbors.webp" alt="Two pairs of hands holding cups across a small marble table" width="800" height="1000" loading="lazy">
+                </div>
+                <span class="pillar-num">03</span>
+                <h2>Neighbors</h2>
+                <p>The best coffee shops know your order and your name. We're here to be that place for the block.</p>
+            </article>
+        </section>
+
+        <!-- ============ Menu preview ============ -->
+        <section class="menu section-dark" id="menu">
+            <div class="menu-head">
+                <p class="eyebrow reveal">02 — First pours</p>
+                <h2 class="section-title reveal">A little taste of <em>the menu</em></h2>
+                <p class="muted reveal">A preview of what we're dialing in. The final list may change before we open.</p>
+            </div>
+
+            <div class="menu-grid">
+                <ul class="menu-list reveal">
+                    <li class="menu-cat">Espresso bar</li>
+                    <li><span>Espresso</span><b></b><small>double, house blend</small></li>
+                    <li><span>Cortado</span><b></b><small>equal parts, no fuss</small></li>
+                    <li><span>Oat Flat White</span><b></b><small>silky & quiet</small></li>
+                    <li><span>Near Latte</span><b></b><small>brown-butter honey</small></li>
+                </ul>
+                <ul class="menu-list reveal">
+                    <li class="menu-cat">Slow bar</li>
+                    <li><span>Pour-over</span><b></b><small>rotating single origin</small></li>
+                    <li><span>Cold Brew</span><b></b><small>steeped 18 hours</small></li>
+                    <li><span>Orbit Tonic</span><b></b><small>espresso, tonic, orange peel</small></li>
+                    <li><span>Something baked</span><b></b><small>ask what's warm</small></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ Gallery ============ -->
+        <section class="gallery section-light" id="space">
+            <div class="gallery-head">
+                <p class="eyebrow eyebrow-dark reveal">03 — The space</p>
+                <h2 class="section-title reveal">Coming together, <em>one cup at a time</em></h2>
+            </div>
+
+            <div class="bento">
+                <figure class="tile tile-tall media media--ember reveal">
+                    <img src="assets/images/storefront-dusk.webp" alt="A brownstone storefront glowing warm at dusk" width="900" height="1200" loading="lazy">
+                    <figcaption>The corner, at dusk</figcaption>
+                </figure>
+                <figure class="tile tile-wide media media--night reveal">
+                    <img src="assets/images/bean-constellation.webp" alt="Coffee beans scattered across black like a star map" width="1600" height="900" loading="lazy">
+                    <figcaption>Every bean, a little star</figcaption>
+                </figure>
+                <figure class="tile media media--crema reveal">
+                    <img src="assets/images/latte-planet.webp" alt="Top-down latte with art shaped like a ringed planet" width="1000" height="1000" loading="lazy">
+                    <figcaption>Latte, in orbit</figcaption>
+                </figure>
+                <figure class="tile media media--sage reveal">
+                    <img src="assets/images/counter-detail.webp" alt="Close-up of a terrazzo counter with an espresso machine and ceramic cups" width="1000" height="1000" loading="lazy">
+                    <figcaption>The counter</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="cta section-dark">
+            <div class="cta-orbit" aria-hidden="true">
+                <span class="ring ring-1"></span>
+                <span class="ring ring-2"></span>
+                <span class="ring ring-3"></span>
+                <span class="planet"></span>
+            </div>
+            <p class="eyebrow reveal">Opening soon</p>
+            <h2 class="cta-title reveal">See you <em>in orbit.</em></h2>
+            <p class="muted reveal">Follow along for the opening date, sneak peeks, and the first free cup.</p>
+            <a href="https://instagram.com" class="btn btn-primary reveal" target="_blank" rel="noopener">
+                Follow updates
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+        </section>
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <p class="footer-mark">near coffee<span class="logo-dot">.</span>space</p>
+        <div class="footer-meta">
+            <span>&copy; 2026 Near Coffee Space</span>
+            <span>New York City</span>
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram ↗</a>
+        </div>
+    </footer>
+
+    <!-- Film grain overlay -->
+    <svg class="grain" aria-hidden="true">
+        <filter id="grain-filter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter>
+        <rect width="100%" height="100%" filter="url(#grain-filter)"/>
+    </svg>
 </body>
 </html>
